@@ -156,9 +156,14 @@ function ShoppingListDirective () {
 ShoppingListController.$inject = ['ShoppingListService']
 function ShoppingListController (ShoppingListService) {
 
+  this.options = [1, 2, 3, 4, 5];
+
+  this.quantity = 1;
+
   this.items = [];
 
   this.addItem = function () {
+
     // console.log(this.name, this.quantity);
     
     ShoppingListService.addItem(this.name, this.quantity);

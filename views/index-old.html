@@ -21,10 +21,10 @@
     }
   </style>
 </head>
-<body ng-app="ShoppingList">
+<body ng-app="ShoppingListApp">
   <div class="jumbotron">
   <h1 class="display-3"><a href="https://github.com/Chaotikaa/shopping-list">Shopping List App</a></h1>
-  <p class="lead">This is a simple shopping list application, powered by JQuery, AngularJS, and Bootstrap.</p>
+  <p class="lead">This is a simple shopping list application, powered by AngularJS.</p>
   <hr class="my-4">
   <p>Enter the items that you want to add to the list below, and choose a quantity (max is 5).</p>
 </div>
@@ -40,8 +40,12 @@
           </div>
           <div class="form-group">
             <label for="nameInput">Select item quantity:</label>
-            <select class="form-control" id="quantityInput" ng-model="sctrl.quantity"
-             ng-options="q for q in sctrl.options">
+            <select class="form-control" id="quantityInput" ng-model="sctrl.quantity" ng-options="q for q in sctrl.options">
+              <!--<option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>-->
             </select>
           </div>
           <button class="btn btn-primary" ng-click="sctrl.addItem()"
@@ -51,9 +55,9 @@
       <div class="col-sm-8">
         <!--<shopping-list items=sctrl.items
           on-remove="sctrl.removeItem(index)"></shopping-list>-->
-        <shopping-list items=sctrl.items
+        <shop-list items=sctrl.items
           on-remove="sctrl.removeItem(index)"
-          title="Shopping List #1"></shopping-list>
+          title="Shopping List #1"></shop-list>
       </div>
       
     </div>
@@ -69,21 +73,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<!--<script src="../src/app.js"></script>-->
+<script src="../src/app.js"></script>
 
 <!-- Modules -->
-<script src="../src/loading-spinner/loading-spinner.module.js"></script>
-<script src="../src/shopping-list/shopping-list.module.js"></script>
-
 <!-- 'ShoppingList module artifacts' -->
-<script src="../src/shopping-list/shopping-list.controller.js"></script>
-<script src="../src/shopping-list/shopping-list.component.js"></script>
-<script src="../src/shopping-list/shopping-list.service.js"></script>
-<script src="../src/shopping-list/cookie-filter.service.js"></script>
-
 <!-- 'LoadingSpinner module artifacts' -->
-<script src="../src/loading-spinner/loading-spinner.component.js"></script>
-
 
 </body>
 
