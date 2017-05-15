@@ -1,0 +1,25 @@
+<h4>{{$ctrl.title}}</h4>
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Item</th>
+      <th>Quantity</th>
+      <th>Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in $ctrl.items">
+      <th>{{$index + 1}}</th>
+      <td>{{item.name}}</td>
+      <td>{{item.quantity}}</td>
+      <td>
+        <button class="btn btn-primary" 
+        ng-click="$ctrl.remove($index)">Remove Item</button>
+    </tr>
+  </tbody>
+</table>
+<div class="error">
+  <strong>Cookies In List!!</strong>
+</div>
+<loading-spinner></loading-spinner>
