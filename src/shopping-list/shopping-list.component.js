@@ -3,7 +3,7 @@
 
 angular.module('ShoppingList')
 .component('shoppingList', {
-  templateUrl: "../../views/shopping-list/shop-list.html", 
+  templateUrl: "/views/shopping-list/shop-list.html", 
   controller: ShoppingListComponentController,
   bindings: {
     items: '<',
